@@ -3,7 +3,7 @@ const services=require('../controller/render')
 
 const router=express.Router();
 
-router.get('/user_home', services.isLoggedIn, services.userHome)
+router.get('/', services.isLoggedIn, services.userHome)
 router.get('/user_logout', services.logout)
 
 

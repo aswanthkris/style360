@@ -33,7 +33,7 @@ exports.loginRouter=(req,res)=>{
 
 exports.otpVerification = (req,res)=>{
     if(req.session.otplogin){
-        res.redirect('/user_home')
+        res.redirect('/')
     }else{
         res.render('user/mobile-verification')
 
@@ -42,7 +42,7 @@ exports.otpVerification = (req,res)=>{
 
 exports.otpVerify =(req,res)=>{
     if(req.session.otplogin){
-        res.redirect('/user_home')
+        res.redirect('/')
     }else{
         res.render('user/otp-verify')
     }
@@ -71,7 +71,7 @@ exports.verifyOtp=(req,res)=>{
                     .then((user)=>{
                         req.session.userId=user.email   
                         req.session.otplogin = true
-                        res.redirect('/user_home')
+                        res.redirect('/')
                     })
             }else{
                 res.redirect('/verifyOtp?otp=false')
@@ -121,7 +121,7 @@ exports.login=(req,res)=>{
         if(result){
             session=req.session
             session.userId=loginData.email
-            res.redirect('/user_home') 
+            res.redirect('/') 
         }else{
             User.findOne({email:loginData.email})
             .then((result)=>{
@@ -187,7 +187,7 @@ exports.isLoggedOut = (req,res,next)=>{
     if(!session.userId){
         next();
     }else
-    res.redirect('/user_home')
+    res.redirect('/')
 }
 
 exports.adminLoggedIn = (req,res,next)=>{
