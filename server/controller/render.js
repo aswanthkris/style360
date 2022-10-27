@@ -463,29 +463,27 @@ exports.cartOperation = (req, res) => {
 exports.userShop = (req, res) => {
   req.session.coupon = "";
 
-  Cart.find()
-    .then((cart) => {
-      Wishlist.find()
-        .then((wishlist) => {
-          Category.find()
-            .then((category) => {
-              Product.find()
-                .then((result) => {
-                  if (result)
-                    res.render("user/shop", {
-                      result,
-                      category,
-                      wishlist,
-                      cart,
-                    });
-                })
-                .catch((err) => console.log(err));
-            })
-            .catch((err) => console.log(err));
-        })
-        .catch((err) => console.log(err));
-    })
-    .catch((err) => console.log(err));
+  Cart.find().then((cart) => {
+    Wishlist.find()
+      .then((wishlist) => {
+        Category.find()
+          .then((category) => {
+            Product.find()
+              .then((result) => {
+                if (result)
+                  res.render("user/shop", {
+                    result,
+                    category,
+                    wishlist,
+                    cart,
+                  });
+              })
+              .catch((err) => console.log(err));
+          })
+          .catch((err) => console.log(err));
+      })
+      .catch((err) => console.log(err));
+  });
 };
 
 exports.productView = (req, res) => {
