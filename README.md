@@ -7,7 +7,7 @@
 - [Run](#run)
 - [Technology](#technology)
 - [Features](#features)
-- [License](#license)
+
 
 ## Introduction
 
@@ -17,13 +17,10 @@ NOTE: Please read the RUN section before opening an issue.
 
 ## Demo
 
-![alt text](MiniProjeect home.jpg)
 
-The application is deployed to AWS and can be accessed through the following link:
+The application is deployed to AWS 
 
-[BUY ON BOOKSTORE](https://buyonbookstore.tk/)
-
-The website resembles a real store and you can add products(Books) to your cart and wishlist and pay for them. If you want to try the checkout process, you can use the dummy card number/ upi/ Internet Bankinng provided by Razorpay for testing . 
+The website is a fashion products commerce platform, you can add products to your cart and wishlist and pay for them. If you want to try the checkout process, you can use the dummy card number/ upi/ Internet Bankinng provided by Razorpay for testing . 
 also There is option for Paypal and COD payments
 Please <u><b>DO NOT</b></u> provide real card number and data.
 
@@ -69,7 +66,7 @@ Deployed in AWS EC2 instance with Nginx reverse proxy
 
 ## Features
 
-The application displays a Online Bookstore store that contains  Different Books and its information.
+The application displays different category of products such as footware,clothes and accessories.
 
 Users can do the following:
 
@@ -102,9 +99,7 @@ Admins can do the following:
 - Manage users
 - View all orders done by users
 - Manage users home page 
-## License
 
-[![License](https://img.shields.io/:License-MIT-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
-- MIT License
-- Copyright 2022 © [VISHNUTVM](https://github.com/vishnutvm)
+
+- Copyright 2022 © [Aswanth Krishna](https://github.com/aswanthkris)
